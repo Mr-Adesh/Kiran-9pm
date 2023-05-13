@@ -26,8 +26,14 @@ CommentRepo commentRepo;
 	 commentRepo.save(comment2);
 	 
 	 tweetRepo.save(tweet);
-	 return "SAVED";
-	 
-	 
+	 return "SAVED";	 
  }
+ public Tweet getTweet(int id) {
+	 return tweetRepo.getById(id);
+ }
+ public List<Tweet> getTweets()
+ {
+	 return tweetRepo.getAllTweetOnly();
+ }
+ 
 }

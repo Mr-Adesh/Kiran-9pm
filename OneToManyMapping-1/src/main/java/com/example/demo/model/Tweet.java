@@ -5,6 +5,7 @@ import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -18,11 +19,9 @@ public class Tweet {
 	int id;
 	String title;
 	String summary;
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "id")
 	@JoinColumn(referencedColumnName = "id")
 	List<Comment> comments = new ArrayList();
-	
-	
 	
 	public List<Comment> getComments() {
 		return comments;
