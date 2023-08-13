@@ -1,0 +1,8 @@
+package com.example.demo.config;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name = "SBI", url = "http://localhost:1111")
+public interface SbiService {
+
+}

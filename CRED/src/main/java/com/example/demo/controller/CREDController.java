@@ -1,0 +1,25 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.config.SbiService;
+
+@RestController
+public class CREDController {
+@Autowired
+SbiService sbiService;
+
+@GetMapping("/tr")
+public String getTransfer()
+{
+	return sbiService.widthdraw()+"---FROM CRED";
+	}
+@GetMapping("/p")
+public String pay()
+{
+	return sbiService.clearOutStanding()+"---FROM CRED";
+	}
+
+}

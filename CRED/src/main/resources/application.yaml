@@ -1,0 +1,10 @@
+server:
+  port: 2222
+spring:
+  application:
+    name : CRED_SERVICE
+eureka:
+  client:
+    service-url:
+      defaultzone: http://127.0.0.1:8761/eureka/
+    enabled: true
