@@ -1,0 +1,10 @@
+server:
+  port: 1111
+spring:
+  application:
+    name : HOTELSERVICE
+eureka:
+  client:
+    service-url:
+      defaultzone: http://127.0.0.1:8761/eureka/
+    enabled: true
